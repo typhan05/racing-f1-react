@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background-color: #020d18;
+  color: #fff;
+  overflow-x: hidden;
+}
+
+section.flag {
+  width: 100vw;
+  max-height: 100vh;
+  height: 30vw;
+}
+
+canvas {
+  vertical-align: center;
+  height: 100% !important;
+  width: 100% !important;
+}
