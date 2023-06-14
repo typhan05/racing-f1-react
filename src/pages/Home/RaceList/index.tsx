@@ -30,19 +30,28 @@ export const RaceList = () => {
               </th>
             </tr>
           </thead>
+
           <tbody>
-            {dataRace.map((item: any, key: number) => {
-              return (
-                <tr key={`race-${key}`} className='bg-gray-800 border-b border-gray-700'>
-                  <td className='px-4 py-2'>{item.nation}</td>
-                  <td className='px-4 py-2 whitespace-nowrap'>{item.date}</td>
-                  <td className='px-4 py-2'>{item.driver}</td>
-                  <td className='px-4 py-2 whitespace-nowrap'>{item.team}</td>
-                  <td className='px-4 py-2'>{item.laps}</td>
-                  <td className='px-4 py-2'>{item.time}</td>
-                </tr>
-              )
-            })}
+            {dataRace.length > 0 ? (
+              dataRace.map((item: any, key: number) => {
+                return (
+                  <tr key={`race-${key}`} className='bg-gray-800 border-b border-gray-700'>
+                    <td className='px-4 py-2'>{item.nation}</td>
+                    <td className='px-4 py-2 whitespace-nowrap'>{item.date}</td>
+                    <td className='px-4 py-2'>{item.driver}</td>
+                    <td className='px-4 py-2 whitespace-nowrap'>{item.team}</td>
+                    <td className='px-4 py-2'>{item.laps}</td>
+                    <td className='px-4 py-2'>{item.time}</td>
+                  </tr>
+                )
+              })
+            ) : (
+              <tr className='text-center italic text-gray-400'>
+                <td colSpan={6} className='px-6 py-3'>
+                  No result...
+                </td>
+              </tr>
+            )}
           </tbody>
         </table>
       </div>
